@@ -1,0 +1,277 @@
+/* GENERAL */
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1,h2,h3,h4,h5,p {
+    font-weight: 300;
+    margin: 0; padding: 0;
+}
+
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: inside;
+}
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+body {
+   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+   font-weight: 300;
+   font-size: 11px;
+   margin: 0; padding: 0;
+}
+
+figcaption {
+    font-size: 10px;
+    color: #d1d1d1;
+    text-align: right;
+}
+
+.bb {
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 15px;
+}
+
+/* STRUCTURE */
+
+#container {
+    width: 1005px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.site-header {
+    padding: 15px 0;
+    height: 90px;
+    border-bottom: 2px solid black;
+}
+
+.header-title-container, .site-nav {
+    float: left;
+}
+
+.site-title {
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: .05em;
+}
+
+.site-nav {
+    margin-left: 350px;
+}
+
+.site-nav .level {
+    float: left;
+    margin-left: 30px;
+}
+
+.site-nav .level[data-index="1"] {
+    margin-left: 0px;
+}
+
+.site-nav .level[data-index="2"] {
+    display: none;
+}
+
+.site-nav .level[data-index="2"].active {
+    display: block;
+}
+
+.nav-link {
+    display: block;
+    line-height: 1.4em;
+}
+
+.nav-link.subitems:after {
+    content: " + ";
+}
+
+.nav-link.subitems.active:after {
+    content: " - ";
+}
+
+.site-nav .level[data-index="2"] .nav-link {
+    color: #747474;
+}
+
+.header-info {
+    float: right;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: .05em;
+}
+
+.content {
+    padding-top: 30px;
+    position: relative;
+    height: -webkit-calc(100% - 90px);
+    height: calc(100% - 90px);
+    overflow: hidden;
+}
+
+/* SERIES */
+
+.series-left, .series-right, .series-content {
+    height: 100%;
+}
+
+.series-left {
+    float: left;
+    width: 232.5px;
+    padding-right: 37.5px;
+    border-right: 1px solid #d1d1d1;
+}
+
+.series-name {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.series-intro p {
+    margin-bottom: 10px;
+    line-height: 1.4em;
+}
+
+.series-center {
+    float: left;
+    padding: 0px 32.5px;
+    width: -webkit-calc(100% - 232.5px);
+    width: calc(100% - 232.5px);
+}
+
+.series-right {
+    float: right;
+    width: 232.5px;
+    padding-left: 37.5px;
+    border-left: 1px solid #d1d1d1;
+}
+
+#content-series .series-right {
+    float: none;
+    position: absolute;
+    right: 0px;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+
+#content-series .series-right.inactive {
+    -webkit-transform: translateX(233px);
+    transform: translateX(233px);
+}
+
+.series-nav {
+    border-bottom: 1px solid #d1d1d1;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.series-btn {
+    width: 19px;
+    height: 19px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.series-btn > img {
+    max-width: 100%;
+}
+
+.series-btn.right {
+    margin-right: 0px;
+}
+
+.series-item-details {
+    line-height: 1.3em;
+    padding-bottom: 15px;
+}
+
+.series-item-note {
+    border-top: 1px solid #d1d1d1;
+    padding-top: 15px;
+}
+
+/* ABOUT */
+
+#content-about .series-center {
+    width: 540px;
+}
+
+.bio p {
+    margin-bottom: 10px;
+    line-height: 1.3em;
+}
+
+.bio p:last-child {
+    margin-bottom: 0px;
+}
+
+.resume {
+    padding-top: 15px;
+}
+
+.resume-col {
+    width: 50%;
+    float: left;
+}
+
+.resume-col.left {
+    padding-right: 15px;
+}
+
+.resume-col.right {
+    padding-left: 15px;
+}
+
+.resume-category {
+    margin-bottom: 15px;
+    line-height: 1.4em;
+}
+
+.resume-category-title {
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.links {
+    padding-top: 15px;
+}
+
+.links:first-child {
+    padding-top: 0px;
+}
+
+.links p {
+    margin-bottom: 15px;
+}
+
+.links p:last-child {
+    margin-bottom: 0px;
+}
