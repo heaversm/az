@@ -59,6 +59,14 @@ figcaption {
     padding-bottom: 15px;
 }
 
+.display-toggle {
+    display: none;
+}
+
+.display-toggle.active {
+    display: block;
+}
+
 /* STRUCTURE */
 
 #container {
@@ -178,13 +186,15 @@ figcaption {
     float: none;
     position: absolute;
     right: 0px;
-    -webkit-transition: all .3s ease-out;
-    transition: all .3s ease-out;
-}
-
-#content-series .series-right.inactive {
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
     -webkit-transform: translateX(233px);
     transform: translateX(233px);
+}
+
+#content-series .series-right.active {
+    -webkit-transform: translateX(0px);
+    transform: translateX(0px);
 }
 
 .series-nav {
