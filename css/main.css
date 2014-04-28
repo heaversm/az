@@ -168,7 +168,6 @@ figcaption {
     float: left;
     width: 232.5px;
     padding-right: 37.5px;
-    border-right: 1px solid #d1d1d1;
 }
 
 .series-name {
@@ -187,6 +186,7 @@ figcaption {
     padding: 0px 0px 0px 32.5px;
     width: -webkit-calc(100% - 232.5px);
     width: calc(100% - 232.5px);
+    border-left: 1px solid #d1d1d1;
 }
 
 .series-right {
@@ -246,6 +246,7 @@ figcaption {
 
 #content-about .series-center {
     width: 540px;
+    padding-right: 32.5px;
 }
 
 .bio p {
