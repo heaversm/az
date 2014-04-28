@@ -1,14 +1,46 @@
 var mainModule = (function($, window) {
 
+    var curPage;
+
     init = function(page) {
-        console.log('init');
+        curPage = page;
         addNavListeners();
         switch (page) {
+            case 'home':
+                initializeGallery();
+                break;
             case 'series':
-                addSeriesListeners();
+                initializeGallery();
                 break;
         }
 
+    }
+
+    initializeGallery = function(){
+        var $grid = $('.grid');
+        $grid.imagesLoaded( function() {
+            console.log('loaded');
+
+            $grid.masonry({
+                columnWidth: 195,
+                itemSelector: '.thumb',
+                gutter: 75,
+                isInitLayout: false
+            });
+
+            $grid.masonry( 'on', 'layoutComplete', onGalleryInitialized);
+
+            $grid.masonry('layout');
+
+        });
+    }
+
+    onGalleryInitialized = function(instance, gridItems){
+        console.log(instance,gridItems);
+        $('.grid').addClass('ready');
+        if (curPage == "series"){
+            addSeriesListeners();
+        }
     }
 
     addSeriesListeners = function() {
